@@ -1,8 +1,13 @@
 {
-  "name": "Getting Started Example",
+  "name": "Date Night",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "permissions": ["activeTab", "declarativeContent"],
+  "description": "Watch with your special someone!",
+  "permissions": [
+    "cookies",
+    "https://*.netflix.com/*",
+    "activeTab",
+    "declarativeContent"
+  ],
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],
@@ -12,6 +17,7 @@
     "default_popup": "popup.html"
 
   },
+  
   "icons": {
     "16": "images/icon.png",
     "32": "images/icon.png",

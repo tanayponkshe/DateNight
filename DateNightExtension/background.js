@@ -5,6 +5,11 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
+
+  chrome.pageAction.onClicked.addListener(function(){
+    alert("there?");
+  })
+
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
