@@ -1,0 +1,57 @@
+body {
+    width: 398px; 
+    text-align: center; 
+    padding: 16px; 
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); 
+    /* border-radius: 10px;  */
+    margin: 0px; 
+}
+
+p {
+    font-size: 12px; 
+    font-family: "Montserrat", sans-serif;
+    color: #32241F; 
+    opacity: .7; 
+    width: 300px; 
+
+}
+
+h2 {
+    font-family: "Alice", sans-serif;
+    font-size: 24px; 
+    color: #32241F; 
+}
+
+.icon_close {
+    position: absolute; 
+    right: 16px; 
+    top: 16px; 
+    width: 16px; 
+    height: 16px; 
+}
+
+.container {
+    margin: 8px;  
+}
+
+.center {
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+}
+
+input {
+    width: 310px; 
+    background-color: #F5EEDD; 
+    border: 1px solid #F3E5C4; 
+    height: 46px; 
+    width: 338px; 
+    color: #6768F6; 
+    border-radius: 3px; 
+    margin: 12px; 
+    font-size: 15px; 
+    font-family: "Montserrat", sans-serif;
+}
+
+
+

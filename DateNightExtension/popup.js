@@ -19,3 +19,9 @@ changeColor.onclick = function(element) {
         {code: 'document.body.style.backgroundColor = "' + color + '";'});
   });
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  $('.fa-copy').on('click', function () {  // the i tag will not exist once the icon is rendered
+    alert('You will never see this');
+  });
+});

@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Alice" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <button id="changeColor"></button>
+    <img src="images/cross.png" class="icon_close" alt="close">
+    <div class="container">
+      <img src="images/placeholder.jpg" alt="illustration">
+    </div>
+    <div class="container">
+      <h2 class="center">Share the link to invite a friend</h2>
+    </div>
+    <div class="container">
+      <p class="center">Anyone with this link will be able to synchronize watching this video with you.</p>
+    </div>
+    <div class="container">
+        <input class="link center" type="text" name="link" value="https://clink.com/1F6l2U131Ipt3k" readonly>
+    </div>
+
+
+    <!-- <div class="container">
+      <input type="text" name="link" placeholder="cup.id/abcd">
+    </div>
+
+    <div class="flex-container" id="sharing-options">
+      <i class="fas fa-copy fa-lg"></i>
+      <i class="fab fa-twitter fa-lg"></i>
+      <i class="fab fa-facebook-messenger fa-lg"></i>
+      <i class="fas fa-envelope fa-lg"></i>
+    </div> -->
+
+
     <script src="popup.js"></script>
   </body>
 </html>
