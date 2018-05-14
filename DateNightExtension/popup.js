@@ -3,25 +3,29 @@
 // found in the LICENSE file.
 
 'use strict';
+let shareLink = document.getElementById('sharelink');
 
-let changeColor = document.getElementById('changeColor');
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
+function createSession(netflixURL, playState) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText());
+        return this.responseText;
+    }
+  };
+  xhttp.open("POST", "localhost:8080/createSession", false);
+  xhttp.send("nflxURL=" + netflixURL + "&playState=" + playState);
+}
+
+shareLink.onclick = function(element) {
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    var url = tabs[0].url;
+    localStorage.setItem('netflixURL', url);
+    localStorage.setItem('playState', 0);
+    var sessionID = createSession();
+    localStorage.setItem('sessionID', sessionID)
 });
+  
 
-changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code: 'document.body.style.backgroundColor = "' + color + '";'});
-  });
 };
-
-document.addEventListener('DOMContentLoaded', function () {
-  $('.fa-copy').on('click', function () {  // the i tag will not exist once the icon is rendered
-    alert('You will never see this');
-  });
-});
