@@ -1,3 +1,4 @@
+const uuidv4 = require('uuid/v4');
 exports.findAll = function(req, res){
     res.send([{
       "id": 1,
@@ -29,7 +30,7 @@ exports.add = function(req, res) {
 };
 
 function generateSessionID(netflixURL, playState) {
-    return "ABC123";
+    return uuidv4(); // ex: '110ec58a-a0f2-4ac4-8393-c866d813b8d1' 
 }
 
 
@@ -37,5 +38,5 @@ exports.update = function(req,res) {
 
 };
 exports.delete = function(req, res) {
-    
+
 };
